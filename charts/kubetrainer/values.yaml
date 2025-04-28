@@ -1,0 +1,67 @@
+# Declare variables to be passed into your templates.
+# -- number of replicas
+replicaCount: 1
+# -- additional deployment labels (will be merged with the default labels)
+additionalLabels: {}
+# additionalLabels:
+#   exposed: "true"
+
+# -- additional annotations
+additionalAnnotations: {}
+
+image:
+  # -- image repository
+  repository: ghcr.io/sgaunet/kubetrainer
+  pullPolicy: IfNotPresent
+  # -- Overrides the image tag whose default is the chart appVersion.
+  tag: ""
+
+# -- image pull secrets
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+podAnnotations: {}
+podSecurityContext: {}
+# fsGroup: 2000
+
+securityContext: {}
+# capabilities:
+#   drop:
+#   - ALL
+# readOnlyRootFilesystem: true
+# runAsNonRoot: true
+# runAsUser: 1000
+service:
+  type: ClusterIP
+  port: 3000
+
+resources: {}
+# We usually recommend not to specify default resources and to leave this as a conscious
+# choice for the user. This also increases chances charts run on environments with little
+# resources, such as Minikube. If you do want to specify resources, uncomment the following
+# lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+# limits:
+#   cpu: 100m
+#   memory: 128Mi
+# requests:
+#   cpu: 100m
+#   memory: 128Mi
+nodeSelector: {}
+tolerations: []
+affinity: {}
+configuration:
+  # -- comment for the documentation
+  DB_DSN: postgres://postgres:password@postgres-server:5432/postgres?sslmode=disable
+  REDIS_DSN: redis://redis-server:6379/0
+  REDIS_STREAMNAME: kubetrainer1
+  REDIS_STREAMGROUP: kubetrainer1
+  REDIS_MAXSTREAMLENGTH: 1000
+
+# -- Command and args to run the container
+command: []
+args: []
+
+# -- additional configmap or secret. 
+additionalEnvFrom: []
+# - configMapRef:
+#     name: common-configmap1
