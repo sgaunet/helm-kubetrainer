@@ -3,9 +3,9 @@ kind: ConfigMap
 metadata:
   name: {{ include "kubetrainer.fullname" . }}
 data:
-  CONSUMER_MODE: {{ .Values.configuration.CONSUMER_MODE }}
-  DB_DSN: {{ .Values.configuration.DB_DSN }}
-  REDIS_DSN: {{ .Values.configuration.REDIS_DSN }}
-  REDIS_STREAMNAME: {{ .Values.configuration.REDIS_STREAMNAME }}
-  REDIS_STREAMGROUP: {{ .Values.configuration.REDIS_STREAMGROUP }}
-  REDIS_MAXSTREAMLENGTH: {{ .Values.configuration.REDIS_MAXSTREAMLENGTH }}
+  CONSUMER_MODE: {{ .Values.configuration.CONSUMER_MODE | quote }}
+  DB_DSN: {{ .Values.configuration.DB_DSN | quote }}
+  REDIS_DSN: {{ .Values.configuration.REDIS_DSN | quote }}
+  REDIS_STREAMNAME: {{ .Values.configuration.REDIS_STREAMNAME | quote }}
+  REDIS_STREAMGROUP: {{ .Values.configuration.REDIS_STREAMGROUP | quote }}
+  REDIS_MAXSTREAMLENGTH: {{ .Values.configuration.REDIS_MAXSTREAMLENGTH | quote }}
