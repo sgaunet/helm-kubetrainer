@@ -42,7 +42,7 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           {{- if .Values.configuration.CONSUMER_MODE }}
-          command: [ kubetrainer -consumer ]
+          command: [ "kubetrainer", "-consumer" ]
           {{- else }}
           command: [ kubetrainer ]
           {{- end }}
