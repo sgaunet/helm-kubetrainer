@@ -1,3 +1,4 @@
+{{- if not .Values.configuration.CONSUMER_MODE }}
 apiVersion: v1
 kind: Service
 metadata:
@@ -13,3 +14,4 @@ spec:
       name: http
   selector:
     {{- include "kubetrainer.selectorLabels" . | nindent 4 }}
+{{- end }}

@@ -1,6 +1,6 @@
 # kubetrainer
 
-![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.2.1](https://img.shields.io/badge/AppVersion-0.2.1-informational?style=flat-square)
+![Version: 0.1.1](https://img.shields.io/badge/Version-0.1.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.2.1](https://img.shields.io/badge/AppVersion-0.2.1-informational?style=flat-square)
 
 A Helm chart for Kubernetes
 
@@ -12,8 +12,7 @@ A Helm chart for Kubernetes
 | additionalEnvFrom | list | `[]` | additional configmap or secret.  |
 | additionalLabels | object | `{}` | additional deployment labels (will be merged with the default labels) |
 | affinity | object | `{}` |  |
-| args | list | `[]` |  |
-| command | list | `[]` | Command and args to run the container |
+| configuration.CONSUMER_MODE | bool | `false` | Launch kubbetrainer in consumer mode |
 | configuration.DB_DSN | string | `"postgres://postgres:password@postgres-server:5432/postgres?sslmode=disable"` | comment for the documentation |
 | configuration.REDIS_DSN | string | `"redis://redis-server:6379/0"` |  |
 | configuration.REDIS_MAXSTREAMLENGTH | int | `1000` |  |

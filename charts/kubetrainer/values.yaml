@@ -56,10 +56,8 @@ configuration:
   REDIS_STREAMNAME: kubetrainer1
   REDIS_STREAMGROUP: kubetrainer1
   REDIS_MAXSTREAMLENGTH: 1000
-
-# -- Command and args to run the container
-command: []
-args: []
+  # -- Launch kubbetrainer in consumer mode
+  CONSUMER_MODE: false
 
 # -- additional configmap or secret. 
 additionalEnvFrom: []

@@ -41,13 +41,10 @@ spec:
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          {{- with .Values.command }}
-          command:
-            {{- toYaml . | nindent 12 }}
-          {{- end }}
-          {{- with .Values.args }}
-          args:
-            {{- toYaml . | nindent 12 }}
+          {{- if .Values.configuration.CONSUMER_MODE }}
+          command: [ kubetrainer -consumer ]
+          {{- else }}
+          command: [ kubetrainer ]
           {{- end }}
           envFrom:
           - configMapRef:
@@ -56,6 +53,7 @@ spec:
           - {{- . | toYaml | nindent 12 }}
           {{- end }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          {{- if not .Values.configuration.CONSUMER_MODE }}
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
@@ -68,6 +66,7 @@ spec:
             httpGet:
               path: /
               port: http
+          {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
