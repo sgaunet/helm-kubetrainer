@@ -9,4 +9,4 @@ data:
   REDIS_STREAMNAME: {{ .Values.configuration.REDIS_STREAMNAME | quote }}
   REDIS_STREAMGROUP: {{ .Values.configuration.REDIS_STREAMGROUP | quote }}
   REDIS_MAXSTREAMLENGTH: {{ .Values.configuration.REDIS_MAXSTREAMLENGTH | quote }}
-  PRODUCER_DATA_SIZE_BYTES: {{ printf "%.0f" .Values.configuration.PRODUCER_DATA_SIZE_BYTES }}
+  PRODUCER_DATA_SIZE_BYTES: {{ .Values.configuration.PRODUCER_DATA_SIZE_BYTES | quote }}
