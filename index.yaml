@@ -3,6 +3,17 @@ entries:
   kubetrainer:
   - apiVersion: v2
     appVersion: 0.3.0
+    created: "2025-05-25T20:18:31.638536971Z"
+    description: A Helm chart for Kubernetes
+    digest: febe1cf90838ad1b58305adf3604992950c6b6a54cbcf787f5f8ff2880822bf9
+    icon: view-source:https://raw.githubusercontent.com/sgaunet/helmchart-helper/main/ico/helm.ico
+    name: kubetrainer
+    type: application
+    urls:
+    - https://github.com/sgaunet/helm-kubetrainer/releases/download/kubetrainer-0.2.2/kubetrainer-0.2.2.tgz
+    version: 0.2.2
+  - apiVersion: v2
+    appVersion: 0.3.0
     created: "2025-05-25T20:14:23.454277757Z"
     description: A Helm chart for Kubernetes
     digest: 83d6142b9ca15fa1c60754cfba3a45986b95f98cd8add8bbdcb534932dd46755
@@ -78,4 +89,4 @@ entries:
     urls:
     - https://github.com/sgaunet/helm-kubetrainer/releases/download/kubetrainer-0.1.0/kubetrainer-0.1.0.tgz
     version: 0.1.0
-generated: "2025-05-25T20:14:23.454369358Z"
+generated: "2025-05-25T20:18:31.638570905Z"
