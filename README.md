@@ -1,5 +1,10 @@
 # helm-kubetrainer
 
+This project is part of other projects:
+
+* https://github.com/sgaunet/kubetrainer : Application installed by this helm chart
+* https://github.com/sgaunet/helm-kubetrainer : Helm chart to deploy kubetrainer in a kubernetes cluster
+
 ```
 helm repo add kubetrainer https://sgaunet.github.io/helm-kubetrainer/
 helm repo update
