@@ -2,6 +2,18 @@ apiVersion: v1
 entries:
   kubetrainer:
   - apiVersion: v2
+    appVersion: 0.4.0
+    created: "2025-12-02T21:52:55.001442261Z"
+    description: Kubernetes training application with PostgreSQL and Redis integration,
+      supporting both HTTP server and consumer worker modes
+    digest: 7f88770bf153038204e85559f4f6c6ce0fcd20c45c5210fed7169b49ddf3f858
+    icon: view-source:https://raw.githubusercontent.com/sgaunet/helmchart-helper/main/ico/helm.ico
+    name: kubetrainer
+    type: application
+    urls:
+    - https://github.com/sgaunet/helm-kubetrainer/releases/download/kubetrainer-0.3.0/kubetrainer-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
     appVersion: 0.3.0
     created: "2025-05-25T20:18:31.638536971Z"
     description: A Helm chart for Kubernetes
@@ -89,4 +101,4 @@ entries:
     urls:
     - https://github.com/sgaunet/helm-kubetrainer/releases/download/kubetrainer-0.1.0/kubetrainer-0.1.0.tgz
     version: 0.1.0
-generated: "2025-05-25T20:18:31.638570905Z"
+generated: "2025-12-02T21:52:55.001478288Z"
