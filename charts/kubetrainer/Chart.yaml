@@ -3,7 +3,7 @@ name: kubetrainer
 description: Kubernetes training application with PostgreSQL and Redis integration, supporting both HTTP server and consumer worker modes
 
 type: application
-version: 0.2.2
-appVersion: "0.3.0"
+version: 0.3.0
+appVersion: "0.4.0"
 
 icon: view-source:https://raw.githubusercontent.com/sgaunet/helmchart-helper/main/ico/helm.ico
